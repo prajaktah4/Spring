@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	
+	<bean id="e" class="com.Entity.Employee">
+	<property name="id" value="111"></property>
+	<property name="name" value="prajakta"></property>
+	<property name="salary" value="1000.0"></property>
+	
+	</bean>
+	
+	<bean id="emp" class="com.Entity.Employee" parent="e">
+	</bean>
+	
+	<bean id="emp1" class="com.Entity.Employee" abstract="true">
+	<property name="id" value="111"></property>
+	<property name="name" value="prajakta"></property>
+	<property name="salary" value="1000.0"></property>
+	
+	</bean>
+
+</beans>
